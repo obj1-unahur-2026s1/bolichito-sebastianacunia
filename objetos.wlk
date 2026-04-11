@@ -1,3 +1,6 @@
+import bolichito.*
+import personas.*
+
 object remera {
   method color() = rojo 
   method material() = lino
@@ -14,19 +17,24 @@ object biblioteca {
   method peso() = 8000
 }
 object munieco {
+
   var peso = 1
+
   method color() = celeste 
   method material() = vidrio
   method peso() = peso
+
   method nuevoPeso(nuevoPeso) {
     peso = nuevoPeso
   }
+
 }
 object placa {
+
   var color = rojo
   var peso = 1
 
-  method color() = variable 
+  method color() = color 
   method material() = cobre
   method peso() = peso
 
@@ -36,11 +44,43 @@ object placa {
   method nuevoPeso(nuevoPeso) {
     peso = nuevoPeso
   }
+  
 }
+object arito {
+      method color() = celeste
+      method material() = cobre
+      method peso() = 180     
+}
+object banquito {
 
+      var color = naranja
+
+      method color() = color 
+      method material() = madera
+      method peso() = 1700
+
+      method nuevoColor(nuevoColor) {
+            color = nuevoColor
+      }
+}
+object cajita {
+
+      var objetoDentro = pelota
+
+      method color() = rojo 
+      method material() = cobre
+      method peso() = 400 + objetoDentro.peso()
+
+      method nuevoObjetoDentro(objeto) {
+            objetoDentro = objeto
+      }
+}
 //----------------------------------colores
 
 object rojo {
+  method esColorFuerte() = true 
+}
+object naranja {
   method esColorFuerte() = true 
 }
 object verde {
@@ -67,8 +107,4 @@ object madera {
 }
 object cuero {
   method esBrillante() = false
-}
-//----------------------------------peso y color variable
-object variable {
-  
 }
